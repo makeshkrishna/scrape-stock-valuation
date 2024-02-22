@@ -35,11 +35,7 @@ collection = db[mongodb_collection]
 # Load stock symbols from CSV
 df = pd.read_csv(csv_path)
 stock_symbols = df['Symbol'].tolist()
-<<<<<<< HEAD
 # print(type(stock_symbols[1]))
-=======
-print(type(stock_symbols[1]))
->>>>>>> origin/main
 
 # Load already processed stock symbols
 processed_stocks = get_last_processed_stock(log_csv_path)

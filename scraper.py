@@ -2,10 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 import html
-<<<<<<< HEAD
 import os
-=======
->>>>>>> origin/main
 import re
 import time
 import pygame

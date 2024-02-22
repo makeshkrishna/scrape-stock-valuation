@@ -2,13 +2,15 @@
 import requests
 from bs4 import BeautifulSoup
 import html
+import os
 import re
 import time
 import pygame
 
+path = os.getcwd() 
 def play_notification_sound():
     pygame.mixer.init()
-    pygame.mixer.music.load(r'C:\sha3uncle\Dad\mixkit-ow-exclamation-of-pain-2204.wav')  # Replace with the path to your notification sound file (WAV format)
+    pygame.mixer.music.load(f'{path}\Dad\mixkit-ow-exclamation-of-pain-2204.wav')  # Replace with the path to your notification sound file (WAV format)
     pygame.mixer.music.play()
     time.sleep(5)  # Adjust the duration the script should wait before continuing (in seconds)
     pygame.mixer.music.stop()

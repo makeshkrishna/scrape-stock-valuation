@@ -1,7 +1,8 @@
 import pymongo
 
 # Example usage:
-csv_path = r'C:\sha3uncle\Dad\stock_.csv'
+path = os.getcwd() 
+csv_path = f'{path}\Dad\stock_.csv'
 mongodb_uri = 'mongodb+srv://sha3uncle:MSRYGViZjAxyY2g3@daddb.3rb4meq.mongodb.net/'  # Replace with your MongoDB URI
 mongodb_database = 'stock_db'
 mongodb_collection = 'stock_valuation'

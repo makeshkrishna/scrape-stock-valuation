@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 from tqdm import tqdm
 from datetime import datetime, timezone
 from pymongo import MongoClient
@@ -20,8 +21,9 @@ def write_processed_stock(csv_path, processed_stocks):
 
 # Example usage:
     # C:\sha3uncle\Dad\stock_.csv
-csv_path = r'C:\sha3uncle\Dad\stock_.csv'
-log_csv_path = r'C:\sha3uncle\Dad\processed_stocks_log_.csv'  # New CSV for logging processed stocks
+path = os.getcwd() 
+csv_path = f'{path}\stock_.csv'
+log_csv_path = f'{path}\processed_stocks_log_.csv'  # New CSV for logging processed stocks
 mongodb_uri = 'mongodb+srv://sha3uncle:MSRYGViZjAxyY2g3@daddb.3rb4meq.mongodb.net/'  # Replace with your MongoDB URI
 mongodb_database = 'stock_db'
 mongodb_collection = 'stock_valuation'
@@ -33,7 +35,7 @@ collection = db[mongodb_collection]
 # Load stock symbols from CSV
 df = pd.read_csv(csv_path)
 stock_symbols = df['Symbol'].tolist()
-print(type(stock_symbols[1]))
+# print(type(stock_symbols[1]))
 
 # Load already processed stock symbols
 processed_stocks = get_last_processed_stock(log_csv_path)

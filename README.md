@@ -107,6 +107,7 @@ To access the scraped data stored in MongoDB, use the following command:
 python get_data.py
 ```
 
-The results will be saved in the `stock_data_output` directory.
+The results will be saved in the `stock_data_output` directory. 
 
---- 
+### Future plans
+In the future, I'm considering converting this project into a Dockerfile. This would help ensure seamless execution across different computers without encountering compatibility issues. Stay tuned for updates on this potential enhancement!

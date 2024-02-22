@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ## Valuation Details Scraper for AlphaSpread
 
 This tool is designed to scrape valuation details from the AlphaSpread website.
@@ -110,5 +110,4 @@ python get_data.py
 
 The results will be saved in the `stock_data_output` directory.
 
->>>>>>> origin/main
 --- 

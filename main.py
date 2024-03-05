@@ -34,8 +34,8 @@ collection = db[mongodb_collection]
 
 # Load stock symbols from CSV
 df = pd.read_csv(csv_path)
-stock_symbols = df['Symbol'].tolist()
-# print(type(stock_symbols[1]))
+stock_symbols = df['Symbol'].dropna().tolist()
+# print((stock_symbols))
 
 # Load already processed stock symbols
 processed_stocks = get_last_processed_stock(log_csv_path)
@@ -92,4 +92,6 @@ for stock_symbol in tqdm(stock_symbols_to_process, desc="Processing stocks"):
 
         # Write the updated list to the log CSV file
         write_processed_stock(log_csv_path, processed_stocks)
+
+        print("Done")
 

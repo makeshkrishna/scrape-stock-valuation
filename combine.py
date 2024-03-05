@@ -1,5 +1,5 @@
 import pandas as pd
-
+import os
 # Load the CSV files
 path = os.getcwd() 
 valuation_df = pd.read_csv(f'{path}\stock_.csv')
